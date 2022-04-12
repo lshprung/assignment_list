@@ -193,7 +193,7 @@ function load_data(mode){
 		return;
 	}
 
-	let url = "backend/hw_schedule2_backend.php";
+	let url = "backend/backend.php";
 	let data = "type=" + type;
 
 	console.log(data);
@@ -245,7 +245,7 @@ function submit_add_class(id){
 	}
 
 	//TODO create array instead
-	let url = "backend/hw_schedule2_backend.php";
+	let url = "backend/backend.php";
 
 	let data = "type=save_class" + 
 		"&add_class_desc=" + encodeURIComponent(name) +
@@ -315,7 +315,7 @@ function submit_add_assignment(id, ass_id){
 		return;
 	}
 
-	let url = "backend/hw_schedule2_backend.php";
+	let url = "backend/backend.php";
 
 	//TODO create array instead
 	let data = "type=save_assignment" + 
@@ -352,7 +352,7 @@ function draw_edit_class(id){
 	draw_add_class(id);
 
 	//load values
-	let url = "backend/hw_schedule2_backend.php";
+	let url = "backend/backend.php";
 
 	let data = "type=load_classes" +
 		"&id=" + encodeURIComponent(id);
@@ -381,7 +381,7 @@ function delete_class(id){
 	if(!prompt) return;
 
 	//note that classes are not deleted, just set to hidden
-	let url = "backend/hw_schedule2_backend.php";
+	let url = "backend/backend.php";
 
 	let data = "type=delete_class" +
 		"&id=" + encodeURIComponent(id);
@@ -409,7 +409,7 @@ function draw_edit_assignment(id, ass_id){
 	//load values
 	const box = document.querySelector("#edit_assignment_box_" + ass_id);
 
-	let url = "backend/hw_schedule2_backend.php";
+	let url = "backend/backend.php";
 
 	let data = "type=load_assignments" +
 		"&id=" + encodeURIComponent(ass_id);
@@ -436,7 +436,7 @@ function draw_edit_assignment(id, ass_id){
 
 /* clone an assignment */
 function clone_assignment(id){
-	let url = "backend/hw_schedule2_backend.php";
+	let url = "backend/backend.php";
 
 	let data = "type=clone_assignment" +
 		"&id=" + encodeURIComponent(id);
@@ -461,7 +461,7 @@ function clone_assignment(id){
 function toggle_done(id){
 	const box = document.querySelector("#edit_assignment_box_" + id);
 
-	let url = "backend/hw_schedule2_backend.php";
+	let url = "backend/backend.php";
 
 	let data = "type=toggle_done" +
 		"&id=" + encodeURIComponent(id);
@@ -488,7 +488,7 @@ function delete_assignment(id){
 	if(!prompt) return;
 
 	//note that classes are not deleted, just set to hidden
-	let url = "backend/hw_schedule2_backend.php";
+	let url = "backend/backend.php";
 
 	let data = "type=delete_assignment" +
 		"&id=" + encodeURIComponent(id);

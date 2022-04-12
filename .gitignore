@@ -1,0 +1,6 @@
+*
+!backend
+!backend/*
+!assignment_list*
+
+!.gitignore
