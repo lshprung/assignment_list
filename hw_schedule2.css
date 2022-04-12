@@ -1,0 +1,128 @@
+/*
+#add_class_dialog {
+	background-color: lightgray;
+	margin: auto;
+	margin-top: 10px;
+	width: 400px;
+}
+
+#add_class_dialog>div {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+}
+*/
+
+#bg {
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 1;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 50% 0;
+	animation:2s hide forwards;
+	animation-delay: .1s;
+}
+@keyframes hide{ 0%{opacity:1;} 100%{opacity:.1;}}
+
+#hw_div {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	display: flex;
+}
+
+#notes_link{
+	text-align: right;
+	font-size: 12px;
+}
+
+.add_dialog {
+	background-color: lightgray;
+	margin: auto;
+	margin-top: 10px;
+	width: 400px;
+}
+
+.add_dialog>div {
+	display: flex;
+	justify-content: space-between;
+	padding: 5px;
+}
+
+.banner {
+	font-size: 24px;
+	margin: 15px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.banner_box {
+	text-align: center;
+}
+
+.cancel {
+	background-color: pink;
+}
+
+.cancel:hover {
+	background-color: red;
+}
+
+.column {
+	width: 50%;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.container:hover button {
+	display: inline;
+}
+
+
+.course {
+	text-decoration: underline;
+	font-weight: bold;
+	margin-right: 15px;
+}
+
+.entries {
+	font-size: 18px;
+	list-style: square;
+	margin-right: 15px;
+}
+
+.entry_box {
+	margin-bottom: 15px;
+}
+
+a{
+	color: inherit;
+}
+
+button.add {
+	background-color: skyblue;
+}
+
+button.add,button.edit,button.delete,button.mark_done {
+	display: none;
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+/*
+button.add:hover,button.edit:hover,button.delete:hover,button.mark_done:hover {
+	font-weight: bold;
+}
+*/
+
+button.delete {
+	background-color: red;
+}
+
+button.edit_assignment {
+	margin-left: 10px;
+}
