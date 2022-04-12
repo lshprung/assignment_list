@@ -1,6 +1,5 @@
 *
-!backend
-!backend/*
+!backend/backend.php
 !assignment_list*
 
 !.gitignore
