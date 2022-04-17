@@ -16,14 +16,22 @@ if($check == "y"){
 		die("Error: Cannot open file \"$config_path\"\n");
 	}
 
-	$input["hostname"] = readline("Enter hostname [default: localhost]: ");
-	if(!$input["hostname"]) $input["hostname"] = "localhost";
+	$input["hostname"] = readline("Enter hostname [leave blank for default]: ");
 	$input["username"] = readline("Enter username: ");
-	$input["password"] = readline("Enter password: ");
+	$input["password"] = readline("Enter password [leave blank for no password]: ");
 	$input["database"] = readline("Enter database: ");
+	$input["port"] = readline("Enter port number [leave blank for default]: ");
+	$input["socket"] = readline("Enter socket [leave blank for default]: ");
 
 	fwrite_wrapper($handle, "<?php\n\n");
-	fwrite_wrapper($handle, "\$db = mysqli_connect(\"" . $input["hostname"] . "\", \"" . $input["username"] . "\", \"" . $input["password"] . "\", \"" . $input["database"] . "\");\n");
+	fwrite_wrapper($handle, "\$db = mysqli_connect(\"" . 
+		$input["hostname"] . "\"" .
+		", \"" . $input["username"] . "\"" .
+		", \"" . $input["password"] . "\"" .
+		", \"" . $input["database"] . "\"" .
+		(!$input["port"] ? "" : ", " . $input["port"]) .
+		(!$input["socket"] ? "" : ", \"" . $input["socket"] . "\"") . ");\n"
+	);
 	fwrite_wrapper($handle, "if(!\$db) die(\"Failed to connect to database: \" . mysqli_connect_error());\n\n");
 	fwrite_wrapper($handle, "?>");
 
