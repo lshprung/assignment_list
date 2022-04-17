@@ -1,7 +1,3 @@
-//set background image
-const bg_image = ["rubber_duck_PNG33.png", "dice.png"];
-document.getElementById("bg").style.backgroundImage = "url(" + bg_image[Math.floor(Math.random() * bg_image.length)] + ")";
-
 //Function to get date
 function get_day(d){
 	if(!d) d = new Date();

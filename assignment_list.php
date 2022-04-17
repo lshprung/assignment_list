@@ -126,6 +126,7 @@ print "TEST: num_hw = $ENGL2A->num_hw";
 		<title>Daily Homework Schedule</title>
 		<link rel="stylesheet" href="assignment_list.css">
 		<script defer src="assignment_list.js"></script>
+		<script defer src="custom/custom.js"></script>
 	</head>
 
 	<body>
