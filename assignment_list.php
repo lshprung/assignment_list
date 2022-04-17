@@ -123,7 +123,7 @@ print "TEST: num_hw = $ENGL2A->num_hw";
 
 <html>
 	<head>
-		<title>Daily Homework Schedule</title>
+		<title>Assignment List</title>
 		<link rel="stylesheet" href="assignment_list.css">
 		<script defer src="assignment_list.js"></script>
 		<script defer src="custom/custom.js"></script>
@@ -131,7 +131,6 @@ print "TEST: num_hw = $ENGL2A->num_hw";
 
 	<body>
 	<div id=bg></div>
-	<div id=notes_link><a href="notes/notes_home.php">SCU Class Notes</a></div>
 	<div class="container banner_box">
 		<span class="banner"></span>
 		<button id="add_class" class="add" onclick="draw_add_class()">add class</button>
