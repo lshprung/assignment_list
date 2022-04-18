@@ -1,0 +1,86 @@
+<html>
+	<head>
+		<title>Assignment List</title>
+		<link rel="stylesheet" href="assignment_list.css">
+		<link rel="stylesheet" href="custom/custom.css">
+		<script defer src="assignment_list.js"></script>
+		<script defer src="custom/custom.js"></script>
+	</head>
+
+	<body>
+	<div id=bg></div>
+	<div class="container banner_box">
+		<span class="banner"></span>
+		<button id="add_class" class="add" onclick="draw_add_class()">add class</button>
+	<div id="add_class_box">
+	</div>
+	</div>
+		<div id="hw_div">
+			<div class="column" id="column_left">
+			</div>
+			<div class="column" id="column_right">
+			</div>
+
+		</div>
+
+		<!-- templates -->
+		<template id='add_class_html'>
+			<div class="add_dialog" id="add_class_dialog">
+				<div>
+					<label for="add_class_id">Class ID:</label>
+					<input name="add_class_id"/>
+				</div>
+				<div>
+					<label for="add_class_desc">Description/Title:</label>
+					<input name="add_class_desc"/>
+				</div>
+				<div>
+					<label for="add_class_link">Class URL:</label>
+					<input type="url" name="add_class_link"/>
+				</div>
+				<div>
+					<label for="add_class_location">Column:</label>
+					<select name="add_class_location">
+						<option value="left">left</option>
+						<option value="right">right</option>
+					</select>
+				</div>
+				<div class="submit_box">
+					<!-- Add cancel and submit buttons in javascript -->
+				</div>
+			</div>
+		</template>
+
+		<template id='add_assignment_html'>
+			<div class="add_dialog">
+				<div>
+					<label for="add_due_date">Due Date:</label>
+					<input name="add_due_date" type="date"/>
+				</div>
+				<div>
+					<label for="add_due_date_alt">Alt Due Date:</label>
+					<input name="add_due_date_alt"/>
+				</div>
+				<div>
+					<label for="add_desc">Description/Title:</label>
+					<input name="add_desc"/>
+				</div>
+				<div>
+					<label for="add_color">Color:</label>
+					<input name="add_color"/>
+				</div>
+				<div>
+					<label for="add_highlight">Highlight:</label>
+					<input name="add_highlight"/>
+				</div>
+				<div>
+					<label for="add_link">Assignment URL:</label>
+					<input type="url" name="add_link"/>
+				</div>
+				<div class="submit_box">
+					<!-- Add cancel and submit buttons in javascript -->
+				</div>
+			</div>
+		</template>
+	</body>
+</html>
