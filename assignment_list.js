@@ -21,13 +21,6 @@ function get_day(d){
 	return output;
 }
 
-function day_of_year(date){
-	//get milliseconds
-	console.log(date);
-	console.log(Math.floor(date.getTime() / 1000 / 60 / 60 / 24));
-	return Math.round(date.getTime() / 1000 / 60 / 60 / 24);
-}
-
 function hide_dialog(selector){
 	const obj = document.querySelector(selector);
 	if(obj) obj.innerHTML = "";
@@ -121,14 +114,10 @@ function draw_assignment(entry){
 	
 	if(!highlight) highlight = "none";
 	let due_date_pieces;
-	let current_date;
 	let due_date_object;
 	if(due_date){
 		due_date_pieces = due_date.split("-");
-		current_date = new Date();
 		due_date_object = new Date(due_date_pieces[0], due_date_pieces[1]-1, due_date_pieces[2]);
-		if(day_of_year(due_date_object) - day_of_year(current_date) <= 0 && color != "black" && color != "brown") color = "red";
-		if((done == 0 && (day_of_year(due_date_object) - day_of_year(current_date) <= -1)) || (highlight == "orange" && (day_of_year(due_date_object) - day_of_year(current_date) <= 6))) highlight = "yellow";
 	}
 	if(highlight != "none" && color == "gray") color = "black";
 	if(done == 1){
@@ -165,7 +154,7 @@ function draw_assignment(entry){
 		assignment_html += due_date_object.getDate()
 	}
 	else assignment_html += due_date_alt;
-	assignment_html += ": <span style='background-color: " + highlight + "'>";
+	assignment_html += ": ";
 	if(link) assignment_html += "<a href='" + link + "'>";
 	assignment_html += desc;
 	if(link) assignment_html += "</a>";
