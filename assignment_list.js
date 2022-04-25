@@ -148,9 +148,9 @@ function draw_assignment(entry){
 	assignment_html += "'>";
 	if(due_date){
 		assignment_html += days[due_date_object.getDay()] + ", ";
-		if(due_date_object.getMonth()+1 < 10) assignment_html += "0";
+		if(due_date_object.getMonth()+1 < 11) assignment_html += "0";
 		assignment_html +=  due_date_object.getMonth()+1 + "/";
-		if(due_date_object.getDate()+1 < 10) assignment_html += "0";
+		if(due_date_object.getDate()+1 < 11) assignment_html += "0";
 		assignment_html += due_date_object.getDate()
 	}
 	else assignment_html += due_date_alt;
